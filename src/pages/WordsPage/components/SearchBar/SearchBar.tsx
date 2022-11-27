@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useState } from "react";
-import Button from "../../../components/buttons/Button";
-import { useGetWordSearchMutation } from "../../../store/slices/services/WordsApi";
+import Button from "../../../../components/buttons/Button";
+import { useGetWordSearchMutation } from "../../../../store/slices/services/WordsApi";
 
 import { StyledSearchBar, StyledSearchForm } from "./SearchBar.styles";
 

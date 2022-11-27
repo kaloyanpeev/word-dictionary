@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "../../../assets/ColorScheme";
+import colors from "../../../../assets/ColorScheme";
 
 export const StyledSearchBar = styled.input`
   width: 400px;

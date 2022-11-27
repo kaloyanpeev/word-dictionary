@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import {
   useGetWordSearchMutation,
   wordApi,
-} from "../../../store/slices/services/WordsApi";
+} from "../../../../store/slices/services/WordsApi";
 import { StyledWordDiv } from "./Word.styles";
 import WordData from "./WordData";
 

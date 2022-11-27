@@ -1,6 +1,6 @@
 import React from "react";
-import SearchBar from "./SearchBar/SearchBar";
-import Word from "./WordComponent/Word";
+import SearchBar from "./components/SearchBar/SearchBar";
+import Word from "./components/WordComponent/Word";
 
 const WordsPage = () => {
   return (

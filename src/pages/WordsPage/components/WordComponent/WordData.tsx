@@ -1,5 +1,5 @@
 import React from "react";
-import { WordDataTypes } from "../../../utils/interfaces";
+import { WordDataTypes } from "../../../../utils/interfaces";
 
 interface WordDataProps {
   wordData: WordDataTypes;
