@@ -13,6 +13,7 @@ const SearchBar = () => {
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
     getWordSearch(word);
+    setWord("");
   };
   return (
     <StyledSearchForm onSubmit={handleSubmit}>
