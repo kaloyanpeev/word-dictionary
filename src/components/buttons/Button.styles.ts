@@ -8,6 +8,7 @@ export const StyledButton = styled.button`
   border-radius: 5px;
   border: none;
   transition: 0.2s ease-in-out;
+
   :hover {
     cursor: pointer;
     filter: brightness(75%);

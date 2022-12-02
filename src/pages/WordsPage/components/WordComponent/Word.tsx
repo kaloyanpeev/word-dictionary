@@ -1,25 +1,31 @@
 import React, { useEffect } from "react";
-import {
-  useGetWordSearchMutation,
-  wordApi,
-} from "../../../../store/slices/services/WordsApi";
+import LoadingDots from "../../../../components/loadingComponents/LoadingDots";
+import { useGetWordSearchMutation } from "../../../../store/slices/services/WordsApi";
 import { StyledWordDiv } from "./Word.styles";
 import WordData from "./WordData";
 
 const Word = () => {
-  const [getWordSearch, { isLoading, data, isError }] =
+  const [getWordSearch, { isLoading, data, isError, error }] =
     useGetWordSearchMutation({
       fixedCacheKey: "shared-searchword",
     });
 
   if (!data && isLoading) {
-    return <StyledWordDiv>Loading...</StyledWordDiv>;
+    return (
+      <StyledWordDiv>
+        <LoadingDots />
+      </StyledWordDiv>
+    );
   }
-  if (isError) {
-    return <StyledWordDiv>Error</StyledWordDiv>;
+  if (isError && error?.status === 404) {
+    return (
+      <StyledWordDiv>
+        <h1>Word not found! :(</h1>
+      </StyledWordDiv>
+    );
   }
   if (!data) {
-    return <StyledWordDiv>Search for a word!</StyledWordDiv>;
+    return <StyledWordDiv>...to find things about it!</StyledWordDiv>;
   }
 
   return (
