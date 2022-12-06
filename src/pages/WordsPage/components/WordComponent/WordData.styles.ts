@@ -6,4 +6,7 @@ export const StyledWordDataDiv = styled.div`
     flex-direction: column;
     margin-bottom: 20px;
   }
+  .bottom-row {
+    margin-bottom: 20px;
+  }
 `;

@@ -23,13 +23,6 @@ const WordData: React.FC<WordDataProps> = ({ wordData }) => {
     () => wordData.results?.filter((d) => Object.hasOwn(d, "definition")),
     [wordData]
   );
-  const partsOfSpeech: string[] = useMemo(
-    () =>
-      [...new Set(wordData.results?.map((o: any) => o.partOfSpeech))].sort(
-        (a, b) => a.localeCompare(b)
-      ),
-    [wordData]
-  );
 
   return (
     <StyledWordDataDiv>
@@ -41,7 +34,7 @@ const WordData: React.FC<WordDataProps> = ({ wordData }) => {
             syllables}
         </div>
       </span>
-      <div>/{renderedPronunciations}/</div>
+      <div className="bottom-row">/{renderedPronunciations}/</div>
       <Definitions definitions={extractDefinitions(definitions)} />
     </StyledWordDataDiv>
   );

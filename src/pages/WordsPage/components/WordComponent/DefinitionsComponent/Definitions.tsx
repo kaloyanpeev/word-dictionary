@@ -1,5 +1,6 @@
 import React from "react";
 import { DefinitionTypes } from "../../../../../types/Definitions";
+import { StyledDefinitionsList } from "./Definitions.styles";
 
 interface DefinitionObjectType {
   name: string;
@@ -13,14 +14,14 @@ interface DefinitionsProps {
 const Definitions: React.FC<DefinitionsProps> = ({ definitions }) => {
   const renderedDefinitions = definitions.map((def) => {
     return (
-      <div>
+      <StyledDefinitionsList>
         <h3>{def.name}</h3>
         <ul>
           {def.definitions.map((definition) => {
             return <li>{definition.definition}</li>;
           })}
         </ul>
-      </div>
+      </StyledDefinitionsList>
     );
   });
   return <div>{renderedDefinitions}</div>;
