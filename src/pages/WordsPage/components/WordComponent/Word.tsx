@@ -11,11 +11,7 @@ const Word = () => {
     });
 
   if (!data && isLoading) {
-    return (
-      <StyledWordDiv>
-        <LoadingDots />
-      </StyledWordDiv>
-    );
+    return <LoadingDots />;
   }
   if (isError && error?.status === 404) {
     return (

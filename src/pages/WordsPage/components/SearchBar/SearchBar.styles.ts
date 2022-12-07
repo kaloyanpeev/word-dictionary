@@ -2,7 +2,7 @@ import styled from "styled-components";
 import colors from "../../../../assets/ColorScheme";
 
 export const StyledSearchBar = styled.input`
-  width: 400px;
+  width: 100%;
   height: 30px;
   font-size: 20px;
   transition: 0.1s ease-in-out;
@@ -22,4 +22,7 @@ export const StyledSearchForm = styled.form`
   align-items: center;
   flex-direction: row;
   margin-bottom: 10px;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: 100px;
 `;

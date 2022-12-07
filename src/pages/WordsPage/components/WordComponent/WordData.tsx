@@ -11,14 +11,17 @@ interface WordDataProps {
 const WordData: React.FC<WordDataProps> = ({ wordData }) => {
   const syllables = wordData.syllables?.list?.map((s) => s).join("-");
 
-  const pronunciations = useMemo(
-    () => [...new Set(Object.values(wordData?.pronunciation as any))],
-    [wordData]
-  );
+  const pronunciations =
+    useMemo(
+      () => [...new Set(Object.values((wordData?.pronunciation as any) || []))],
+      [wordData]
+    ) || [];
+
   const renderedPronunciations = useMemo(
-    () => pronunciations.map((p) => p).join(", "),
+    () => pronunciations?.map((p) => p).join(", "),
     [pronunciations]
   );
+
   const definitions: any = useMemo(
     () => wordData.results?.filter((d) => Object.hasOwn(d, "definition")),
     [wordData]
@@ -41,7 +44,9 @@ const WordData: React.FC<WordDataProps> = ({ wordData }) => {
             syllables}
         </div>
       </span>
-      <div>/{renderedPronunciations}/</div>
+      {renderedPronunciations && (
+        <div className="bottom-row">/{renderedPronunciations}/</div>
+      )}
       <Definitions definitions={extractDefinitions(definitions)} />
     </StyledWordDataDiv>
   );
