@@ -6,4 +6,10 @@ export interface DefinitionTypes {
   hasParts?: string[];
   hasTypes?: string[];
   memberOf?: string[];
+  antonyms?: string[];
+}
+
+export interface DefinitionItemTypes {
+  data: DefinitionTypes;
+  index: number;
 }

@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const StyledLoadingDiv = styled.div`
+  width: 100%;
   .lds-ellipsis {
     display: inline-block;
     position: relative;
-    width: 80px;
+    width: 100%;
     height: 80px;
   }
   .lds-ellipsis div {
