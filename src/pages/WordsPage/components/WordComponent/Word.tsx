@@ -13,6 +13,7 @@ const Word = () => {
   if (!data && isLoading) {
     return <LoadingDots />;
   }
+  // @ts-ignore
   if (isError && error?.status === 404) {
     return (
       <StyledWordDiv>

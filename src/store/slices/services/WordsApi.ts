@@ -6,9 +6,9 @@ export const wordApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://wordsapiv1.p.rapidapi.com/words/",
   }),
-  endpoints: (builder) => ({
+  endpoints: (builder: any) => ({
     getWord: builder.query({
-      query(body) {
+      query(body: any) {
         return {
           url: body,
           headers: {
@@ -20,7 +20,7 @@ export const wordApi = createApi({
       },
     }),
     getWordSearch: builder.mutation({
-      query(word) {
+      query(word: string) {
         return {
           url: word,
           method: "GET",
