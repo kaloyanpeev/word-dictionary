@@ -1,9 +1,9 @@
 {
-  "name": "website-frontend",
+  "name": "word-dictionary-kaloyanpeev",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kaloyanpeev.github.io/website-frontend/",
+  "homepage": "https://kaloyanpeev.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
