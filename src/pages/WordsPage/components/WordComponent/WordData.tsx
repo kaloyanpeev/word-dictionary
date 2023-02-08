@@ -29,14 +29,14 @@ const WordData: React.FC<WordDataProps> = ({ wordData }) => {
 
   return (
     <StyledWordDataDiv>
-      <span className="top-row">
+      <div className="top-row">
         <h1>{wordData.word}</h1>
         <div>
           {wordData.syllables &&
             wordData.syllables?.list?.length > 1 &&
             syllables}
         </div>
-      </span>
+      </div>
       {renderedPronunciations && (
         <div className="bottom-row">/{renderedPronunciations}/</div>
       )}

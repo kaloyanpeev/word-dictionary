@@ -10,6 +10,7 @@ export const StyledSearchBar = styled.input`
   border: none;
   box-sizing: border-box;
   padding-left: 5px;
+
   :focus {
     outline: 3px solid ${colors.color4};
     border-radius: 5px;
